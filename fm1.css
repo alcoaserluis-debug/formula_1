@@ -1,0 +1,294 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, Helvetica, sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:#0d0d0d;
+color:white;
+overflow-x:hidden;
+}
+
+/* MENU */
+
+header{
+background:black;
+position:sticky;
+top:0;
+z-index:1000;
+box-shadow:0 0 15px red;
+}
+
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 8%;
+}
+
+nav h1{
+color:red;
+font-size:32px;
+}
+
+nav ul{
+display:flex;
+gap:20px;
+list-style:none;
+}
+
+nav ul li a{
+text-decoration:none;
+color:white;
+font-weight:bold;
+transition:.3s;
+}
+
+nav ul li a:hover{
+color:red;
+}
+
+/* VIDEO PORTADA */
+
+.hero-video{
+position:relative;
+width:100%;
+height:100vh;
+overflow:hidden;
+}
+
+.hero-video video{
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+object-fit:cover;
+}
+
+.hero-video::before{
+content:"";
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,.25);
+z-index:1;
+}
+
+.contenido-video{
+position:absolute;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+text-align:center;
+width:100%;
+z-index:2;
+}
+
+.contenido-video h2{
+font-size:100px;
+color:white;
+text-shadow:4px 4px 15px black;
+margin-bottom:20px;
+}
+
+.contenido-video p{
+font-size:35px;
+color:white;
+text-shadow:3px 3px 10px black;
+}
+
+/* BOTONES */
+
+.btn{
+display:inline-block;
+background:red;
+color:white;
+padding:15px 30px;
+border-radius:30px;
+text-decoration:none;
+font-weight:bold;
+margin:10px;
+transition:.3s;
+}
+
+.btn:hover{
+background:#b30000;
+transform:translateY(-5px);
+}
+
+/* TITULOS */
+
+h1{
+text-align:center;
+color:red;
+margin:30px 0;
+}
+
+h2{
+text-align:center;
+color:red;
+margin:30px 0;
+}
+
+.texto{
+width:85%;
+margin:auto;
+text-align:center;
+font-size:20px;
+line-height:35px;
+padding-bottom:40px;
+}
+
+/* TARJETAS */
+
+.cards{
+width:95%;
+margin:auto;
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:30px;
+padding-bottom:60px;
+}
+
+.card{
+width:350px;
+background:#1a1a1a;
+border-radius:15px;
+overflow:hidden;
+box-shadow:0 5px 15px rgba(255,0,0,.3);
+transition:.4s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+box-shadow:0 10px 25px rgba(255,0,0,.7);
+}
+
+.card img{
+width:100%;
+height:220px;
+object-fit:cover;
+}
+
+.card h3{
+color:red;
+padding:15px;
+}
+
+.card p{
+padding:0 15px 20px;
+line-height:28px;
+}
+
+.card iframe{
+width:100%;
+height:220px;
+border:none;
+}
+
+/* FORMULARIO */
+
+form{
+width:90%;
+max-width:700px;
+margin:30px auto;
+display:flex;
+flex-direction:column;
+gap:15px;
+}
+
+input,
+textarea{
+padding:15px;
+border:none;
+border-radius:10px;
+background:#1f1f1f;
+color:white;
+font-size:16px;
+}
+
+textarea{
+height:180px;
+resize:none;
+}
+
+button{
+background:red;
+color:white;
+border:none;
+padding:15px;
+font-size:18px;
+font-weight:bold;
+border-radius:10px;
+cursor:pointer;
+transition:.3s;
+}
+
+button:hover
+
+/* BOTON VOLVER */
+
+.volver{
+position:fixed;
+right:20px;
+bottom:20px;
+background:red;
+color:white;
+padding:15px 20px;
+border-radius:30px;
+text-decoration:none;
+font-weight:bold;
+transition:.3s;
+z-index:999;
+}
+
+.volver:hover
+
+/* FOOTER */
+
+footer{
+background:black;
+padding:25px;
+text-align:center;
+margin-top:50px;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+nav{
+flex-direction:column;
+gap:15px;
+}
+
+nav ul{
+flex-wrap:wrap;
+justify-content:center;
+}
+
+.contenido-video h2{
+font-size:40px;
+}
+
+.contenido-video p{
+font-size:18px;
+}
+
+.card{
+width:100%;
+}
+
+.texto{
+font-size:18px;
+width:90%;
+}
+
+}
